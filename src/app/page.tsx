@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Dock } from '@/components/Dock'
-import { GradientOrbs } from '@/components/GradientOrbs'
+import { AnimatedBackground } from '@/components/AnimatedBackground'
 import { Section } from '@/components/Section'
 import { ProjectCard } from '@/components/ProjectCard'
 import { WindowCard } from '@/components/WindowCard'
@@ -135,7 +135,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
-      <GradientOrbs />
+      <AnimatedBackground />
       <Dock />
 
       {/* Hero Section */}
@@ -357,22 +357,22 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <span className="text-[var(--text-tertiary)]">$</span>
                   <span className="text-[var(--text-secondary)]">email</span>
-                  <span className="text-[var(--accent)]">meekeelangelo@gmail.com</span>
+                  <a href="mailto:meekeelangelo@gmail.com" className="text-[var(--accent)] hover:underline transition-all">meekeelangelo@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[var(--text-tertiary)]">$</span>
                   <span className="text-[var(--text-secondary)]">github</span>
-                  <span className="text-[var(--accent)]">github.com/cetvoropek</span>
+                  <a href="https://github.com/cetvoropek" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline transition-all">github.com/cetvoropek</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[var(--text-tertiary)]">$</span>
                   <span className="text-[var(--text-secondary)]">linkedin</span>
-                  <span className="text-[var(--accent)]">@meekeelangelo</span>
+                  <a href="https://linkedin.com/in/meekeelangelo" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline transition-all">@meekeelangelo</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[var(--text-tertiary)]">$</span>
                   <span className="text-[var(--text-secondary)]">discord</span>
-                  <span className="text-[var(--accent)]">@fsocietydev</span>
+                  <a href="https://discord.com/users/fsocietydev" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline transition-all">@fsocietydev</a>
                 </div>
               </div>
             </WindowCard>
