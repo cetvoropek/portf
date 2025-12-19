@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Dock } from '@/components/Dock'
-import { AnimatedBackground } from '@/components/AnimatedBackground'
+import { EtheralShadow } from '@/components/ui/etheral-shadow'
 import { Section } from '@/components/Section'
 import { ProjectCard } from '@/components/ProjectCard'
 import { WindowCard } from '@/components/WindowCard'
@@ -135,7 +135,14 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
-      <AnimatedBackground />
+      <div className="fixed inset-0 z-0">
+        <EtheralShadow
+          color="rgba(59, 130, 246, 0.6)"
+          animation={{ scale: 100, speed: 85 }}
+          noise={{ opacity: 0.8, scale: 1.3 }}
+          sizing="fill"
+        />
+      </div>
       <Dock />
 
       {/* Hero Section */}
