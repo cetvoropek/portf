@@ -133,34 +133,29 @@ body {
   background: var(--text-secondary);
 }
 
-/* Glass Panel Base */
+/* Glass Panel Base - NO blur for performance */
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid var(--glass-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   box-shadow: var(--glass-shadow);
 }
 
-/* Window Style */
+/* Window Style - NO blur for performance */
 .window {
-  background: var(--window-bg);
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  background: var(--bg-secondary);
   border: 1px solid var(--window-border);
   border-radius: 12px;
   box-shadow:
     0 0 0 0.5px rgba(0, 0, 0, 0.1),
-    0 22px 70px 4px rgba(0, 0, 0, 0.15),
-    0 0 0.5px 0 rgba(255, 255, 255, 0.1) inset;
+    0 8px 32px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
 .dark .window {
+  background: rgba(28, 28, 30, 0.95);
   box-shadow:
     0 0 0 0.5px rgba(255, 255, 255, 0.05),
-    0 22px 70px 4px rgba(0, 0, 0, 0.5),
-    0 0 0.5px 0 rgba(255, 255, 255, 0.05) inset;
+    0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* Window Header */
@@ -197,33 +192,30 @@ body {
   background: #28c840;
 }
 
-/* Dock Style */
+/* Dock Style - NO blur for performance */
 .dock {
-  background: var(--dock-bg);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--dock-border);
   border-radius: 18px;
   box-shadow:
     0 0 0 0.5px rgba(0, 0, 0, 0.05),
-    0 10px 40px rgba(0, 0, 0, 0.12);
+    0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 6px 8px;
 }
 
 .dark .dock {
+  background: rgba(40, 40, 44, 0.95);
   box-shadow:
     0 0 0 0.5px rgba(255, 255, 255, 0.05),
-    0 10px 40px rgba(0, 0, 0, 0.4);
+    0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Spotlight Search Style */
+/* Spotlight Search Style - NO blur for performance */
 .spotlight {
-  background: var(--spotlight-bg);
-  backdrop-filter: blur(50px) saturate(200%);
-  -webkit-backdrop-filter: blur(50px) saturate(200%);
-  border: 1px solid var(--glass-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 /* iOS-style Icons */

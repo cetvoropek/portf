@@ -116,7 +116,8 @@ export function EtheralShadow({
                 style={{
                     position: "absolute",
                     inset: -displacementScale,
-                    filter: animationEnabled ? `url(#${id}) blur(4px)` : "none"
+                    filter: animationEnabled ? `url(#${id})` : "none",
+                    willChange: "filter"
                 }}
             >
                 {animationEnabled && (

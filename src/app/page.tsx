@@ -137,9 +137,9 @@ export default function Home() {
     <div ref={containerRef} className="relative">
       <div className="fixed inset-0 z-0">
         <EtheralShadow
-          color="rgba(59, 130, 246, 0.6)"
-          animation={{ scale: 100, speed: 85 }}
-          noise={{ opacity: 0.8, scale: 1.3 }}
+          color="rgba(59, 130, 246, 0.5)"
+          animation={{ scale: 40, speed: 50 }}
+          noise={{ opacity: 0.5, scale: 1 }}
           sizing="fill"
         />
       </div>
