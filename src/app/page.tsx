@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Dock } from '@/components/Dock'
-import { StormBackground } from '@/components/StormBackground'
+import { PixelGrid } from '@/components/ui/pixel-grid'
 import { Section } from '@/components/Section'
 import { ProjectCard } from '@/components/ProjectCard'
 import { WindowCard } from '@/components/WindowCard'
@@ -135,7 +135,15 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
-      <StormBackground />
+      <PixelGrid
+        pixelColor="#3b82f6"
+        pixelSize={4}
+        pixelSpacing={8}
+        glow={true}
+        pixelMaxLife={400}
+        pixelMinLife={200}
+        className="z-0"
+      />
       <Dock />
 
       {/* Hero Section */}
