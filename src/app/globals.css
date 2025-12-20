@@ -399,6 +399,109 @@ body {
   animation-delay: 4s;
 }
 
+/* Storm Background Styles */
+.rain-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-drop {
+  position: absolute;
+  top: -20px;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.5));
+  animation: rain-fall linear infinite;
+  will-change: transform;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(-10px);
+  }
+}
+
+/* Fog layers */
+.fog-layer {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat-x;
+  will-change: transform;
+}
+
+.fog-1 {
+  background: linear-gradient(90deg, transparent 0%, rgba(100, 120, 150, 0.1) 50%, transparent 100%);
+  animation: fog-move 25s linear infinite;
+}
+
+.fog-2 {
+  background: linear-gradient(90deg, transparent 0%, rgba(80, 100, 130, 0.08) 50%, transparent 100%);
+  animation: fog-move 35s linear infinite reverse;
+}
+
+@keyframes fog-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Floating particles */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: particle-float 15s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.5;
+  }
+}
+
+/* Slow pulse for ambient glows */
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
 /* Focus States */
 *:focus-visible {
   outline: 2px solid var(--accent);

@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Dock } from '@/components/Dock'
+import { StormBackground } from '@/components/StormBackground'
 import { Section } from '@/components/Section'
 import { ProjectCard } from '@/components/ProjectCard'
 import { WindowCard } from '@/components/WindowCard'
@@ -134,12 +135,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Lightweight CSS animated background */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-blue-500/20 animate-blob" />
-        <div className="absolute top-1/3 -right-1/4 w-[500px] h-[500px] rounded-full bg-purple-500/20 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-1/4 left-1/4 w-[550px] h-[550px] rounded-full bg-cyan-500/15 animate-blob animation-delay-4000" />
-      </div>
+      <StormBackground />
       <Dock />
 
       {/* Hero Section */}
